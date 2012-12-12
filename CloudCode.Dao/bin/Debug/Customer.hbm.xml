@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+ 
+  <class name="CloudCode.Domain.Customer,CloudCode.Domain" table="Customers" lazy="false" >
+    <id name="Id" unsaved-value="null">
+      <column name="CustomerID" length="5" sql-type="nchar" not-null="true" unique="true" index="PK_Customers"/>
+      <generator class="assigned" />
+    </id>
+    <property name="CompanyName" column="CompanyName"  length="40"  not-null="true" index="CompanyName"/>
+    <property name="ContactName" length="30" not-null="false"/>
+    <property name="ContactTitle" length="30"  not-null="false"/>
+    <property name="Address" length="60"  not-null="false"/>
+    <property name="City" length="15"  not-null="false" index="City"/>
+    <property name="Region" length="15" not-null="false" index="Region"/>
+    <property name="PostalCode" length="10"  not-null="false" index="PostalCode"/>
+    <property name="Country" type="String" length="15"  not-null="false"/>
+    <property name="Phone" length="24"  not-null="false"/>
+    <property name="Fax" length="24"  not-null="false"/>
+  </class>  
+</hibernate-mapping>

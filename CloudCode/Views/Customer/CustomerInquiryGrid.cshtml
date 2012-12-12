@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "CustomerInquiryGrid";
+}
+
+<h2>CustomerInquiryGrid</h2>
+@model CloudCode.View.CustomerViewModel
+@using CloudCode.Helpers;
+
+@{
+    
+    CloudCode.Web.Controls.CloudCodeDataGrid pagedDataGrid = new CloudCode.Web.Controls.CloudCodeDataGrid("CustomerInquirGrid");
+   
+    pagedDataGrid.Title = "Customers";
+    
+    pagedDataGrid.TotalPages = Model.TotalPages;
+    pagedDataGrid.TotalRecords = Model.TotalCustomers;
+    pagedDataGrid.CurrentPageNumber = Model.CurrentPageNumber;
+    pagedDataGrid.SortDirection = Model.SortDirection;
+    pagedDataGrid.SortExpression = Model.SortExpression;
+    pagedDataGrid.RowSelectionFunction = "CustomerSelected";
+    pagedDataGrid.AjaxFunction = "CustomerInquiry";
+       
+    pagedDataGrid.AddColumn("CustomerID", "Customer ID", "20%", "left");
+    pagedDataGrid.AddColumn("CompanyName", "Company Name", "40%", "left");
+    pagedDataGrid.AddColumn("ContactName", "Contact Name", "20%", "left");
+    pagedDataGrid.AddColumn("City", "City", "20%", "left");
+
+    foreach (var item in Model.Customers)
+    {
+        pagedDataGrid.AddRow();       
+        pagedDataGrid.PopulateRow("CustomerID", item.Id , true);
+        pagedDataGrid.PopulateRow("CompanyName", item.CompanyName, false);
+        pagedDataGrid.PopulateRow("ContactName", item.ContactName, false);
+        pagedDataGrid.PopulateRow("City", item.City, false);
+        pagedDataGrid.InsertRow();
+    }
+    
+}
+
+@Html.RenderCloudCodeDataGrid(pagedDataGrid)

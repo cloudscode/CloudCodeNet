@@ -1,0 +1,14 @@
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\Customer.hbm.xml
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\CloudCode.Dao.dll
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\CloudCode.Dao.pdb
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\CloudCode.Domain.dll
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\Iesi.Collections.dll
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\NHibernate.dll
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\Spring.Core.dll
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\Spring.Data.dll
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\Common.Logging.dll
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\Spring.Aop.dll
+F:\NET\CloudCode\CloudCode.Dao\bin\Debug\CloudCode.Domain.pdb
+F:\NET\CloudCode\CloudCode.Dao\obj\Debug\CloudCode.Dao.csprojResolveAssemblyReference.cache
+F:\NET\CloudCode\CloudCode.Dao\obj\Debug\CloudCode.Dao.dll
+F:\NET\CloudCode\CloudCode.Dao\obj\Debug\CloudCode.Dao.pdb

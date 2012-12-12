@@ -1,0 +1,110 @@
+﻿@model CloudCode.View.CustomerViewModel
+@using CloudCode.Helpers;
+
+@{    
+    
+    CloudCode.Web.Controls.PageIDGeneration webControls = new CloudCode.Web.Controls.PageIDGeneration();
+
+    string txtId = webControls.GenerateID("Id");
+    string txtCompanyName = webControls.GenerateID("CompanyName");
+    string btnSearch = webControls.GenerateID("BtnSearch");
+    string btnReset = webControls.GenerateID("BtnReset");
+    string messageBox = webControls.GenerateID("MessageBox");
+    string productResults = webControls.GenerateID("ProductResults");
+    
+}
+
+<div class="SearchBar">
+
+<div style="float:left; width:200px">
+Product ID 
+</div>
+
+<div style="float:left; width:200px">
+Product Description
+</div>
+
+<div style="clear:both;"></div>       
+
+<div style="float:left;  width:200px">
+<input id="@txtId" type="text" value=""  style = "width:150px" />
+</div>
+
+
+<div style="float:left;  width:200px ">
+<input id="@txtCompanyName" type="text" value=""  style = "width:150px" />
+</div>
+
+<input id="@btnSearch" type="button" value="Search" />
+<input id="@btnReset" type="button" value="Reset" />
+</div>
+
+<div style="clear:both;"></div>&nbsp;
+<div id="@productResults"></div>  
+<div id="@messageBox"></div> 
+
+@*@Html.RenderJavascript(webControls.RenderJavascriptVariables("ProductInquiry_"))*@
+
+<script language="javascript" type="text/javascript">
+
+    $(ProductInquiry_BtnSearch).click(function () {
+        ProductInquiryInitializeGrid();
+    });
+
+    $(ProductInquiry_BtnReset).click(function () {
+        $(ProductInquiry_ProductID).val("");
+        $(ProductInquiry_ProductName).val("");
+        ProductInquiryInitializeGrid();
+    });
+
+    function ProductInquiryRequest() {
+        this.CurrentPageNumber;
+        this.PageSize;
+        this.ProductID;
+        this.ProductName;
+        this.SortDirection;
+        this.SortExpression;
+        this.PageID;
+    };
+
+    function ProductInquiry(currentPageNumber, sortExpression, sortDirection) {
+      
+        var url = "/Products/ProductInquiry";
+
+        var productInquiryRequest = new ProductInquiryRequest();
+
+        productInquiryRequest.ProductID = $(ProductInquiry_ProductID).val();
+        productInquiryRequest.ProductName = $(ProductInquiry_ProductName).val();
+        productInquiryRequest.CurrentPageNumber = currentPageNumber;
+        productInquiryRequest.SortDirection = sortDirection;
+        productInquiryRequest.SortExpression = sortExpression;
+        productInquiryRequest.PageSize = 10;
+        productInquiryRequest.PageID = $(ProductInquiry_PageID).val();
+
+        $.post(url, productInquiryRequest, function (data, textStatus) {
+            ProductInquiryComplete(data);
+        });
+
+    };
+
+    function ProductInquiryComplete(result) {
+        if (result.ReturnStatus == true) {
+            $(ProductInquiry_ProductResults).html("");         
+            $(ProductInquiry_ProductResults).html(result.ProductInquiryView);
+            $(ProductInquiry_MessageBox).html("");
+        }
+        else {
+            $(ProductInquiry_MessageBox).html(result.MessageBoxView);
+        }
+    }
+
+ 
+    function ProductInquiryInitializeGrid() {
+        ProductInquiry(1, "ProductName", "ASC");
+    }
+
+    function ProductSelected(productID) {
+        GetProductInformation(productID);
+    }    
+  
+</script>

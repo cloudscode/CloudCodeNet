@@ -1,0 +1,5 @@
+F:\NET\CloudCode\CloudCode.Web.Controls\bin\Debug\CloudCode.Web.Controls.dll
+F:\NET\CloudCode\CloudCode.Web.Controls\bin\Debug\CloudCode.Web.Controls.pdb
+F:\NET\CloudCode\CloudCode.Web.Controls\obj\Debug\CloudCode.Web.Controls.dll
+F:\NET\CloudCode\CloudCode.Web.Controls\obj\Debug\CloudCode.Web.Controls.pdb
+F:\NET\CloudCode\CloudCode.Web.Controls\obj\Debug\CloudCode.Web.Controls.csprojResolveAssemblyReference.cache

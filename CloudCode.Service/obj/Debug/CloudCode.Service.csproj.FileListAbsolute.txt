@@ -1,0 +1,16 @@
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\Customer.hbm.xml
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\CloudCode.Service.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\CloudCode.Service.pdb
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\CloudCode.Dao.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\CloudCode.Domain.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\Spring.Aop.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\Spring.Core.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\Spring.Data.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\NHibernate.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\Common.Logging.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\Iesi.Collections.dll
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\CloudCode.Dao.pdb
+F:\NET\CloudCode\CloudCode.Service\bin\Debug\CloudCode.Domain.pdb
+F:\NET\CloudCode\CloudCode.Service\obj\Debug\CloudCode.Service.csprojResolveAssemblyReference.cache
+F:\NET\CloudCode\CloudCode.Service\obj\Debug\CloudCode.Service.dll
+F:\NET\CloudCode\CloudCode.Service\obj\Debug\CloudCode.Service.pdb

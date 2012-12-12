@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!--<object id="framework" type="Spring_Web_1.Framework">
+    <property name="Name" value="Spring.NET"/>
+  </object>
+
+
+  --><!-- 页面对象 --><!--
+  <object type="~/index.aspx">
+    --><!-- ref 表示引用的对象 --><!--
+    <property name="Framework" ref="framework"/>
+  </object>-->
+
+  <!--<object type="CustomerController">
+    <property name="CustomerService" ref="CustomerServiceImpl"/>
+  </object>-->
+  <!--<object name="CustomerController" type="CustomerController" scope="session">
+    <property name="CustomerService" ref="CustomerServiceImpl"/>
+  </object>-->
+  <object type="CloudCode.Controllers.CustomerController, CloudCode" singleton="false" >
+    <property name="CustomerService" ref="CustomerServiceImpl"/>
+  </object>
+  <object type="~/Customer/index.aspx">
+    <property name="CustomerService" ref="CustomerServiceImpl"/>
+  </object>
+</objects>

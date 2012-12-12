@@ -1,0 +1,6 @@
+F:\NET\CloudCode\CloudCode.Domain\bin\Debug\Customer.hbm.xml
+F:\NET\CloudCode\CloudCode.Domain\bin\Debug\CloudCode.Domain.dll
+F:\NET\CloudCode\CloudCode.Domain\bin\Debug\CloudCode.Domain.pdb
+F:\NET\CloudCode\CloudCode.Domain\obj\Debug\CloudCode.Domain.dll
+F:\NET\CloudCode\CloudCode.Domain\obj\Debug\CloudCode.Domain.pdb
+F:\NET\CloudCode\CloudCode.Domain\obj\Debug\CloudCode.Domain.csprojResolveAssemblyReference.cache
